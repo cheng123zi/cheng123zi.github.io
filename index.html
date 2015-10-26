@@ -1,1 +1,24 @@
-jsdfjasdjfksjdkfjlksdfsadfadsfsadfas
+
+用strtotime()和GNU日期语法---------推荐！
+//3天后; //当前时间为2010-02-23
+$d=strtotime('3 days');
+echo '3天后'.date('Y-m-d',$d)."<br />";
+//3天前：
+$d=strtotime('-3 days');
+echo '3天前'.date('Y-m-d',$d)."<br />"; //2010-02-20
+//一个月前：
+$d=strtotime('-1 months');
+echo '一个月前'.date('Y-m-d',$d)."<br />"; //2010-01-23
+
+//2个月后：
+$d=strtotime('2 months');
+echo '二个月后'.date('Y-m-d',$d)."<br />"; //2010-04-23
+
+//1年前：
+$d=strtotime('-1 years');
+echo '1年前'.date('Y-m-d',$d)."<br />"; //2009-02-23
+
+//2小时前：
+$d=strtotime('-2 hours');
+echo '目前：'.date('Y-m-d H:i:s',time()).'，2小时前'.date('Y-m-d H:i:s',$d)."<br />"; 
+//目前：2010-02-23 13:38:49，2小时前2010-02-23 11:38:49
